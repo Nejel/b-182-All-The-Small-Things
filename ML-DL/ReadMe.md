@@ -4,7 +4,14 @@ This is my local copy of [this repo](https://github.com/demidovakatya/vvedenie-m
 Author: [demidovakatya](https://github.com/demidovakatya/)
 
 
+#### Моя часть
+
+
+* [Сборник Джупитеровских ноутов](https://proglib.io/p/jupyter-notebook-best/)
+
+
 #### Оглавление
+
 
 * [Библиотека ML-специалиста](#Библиотека-ml-специалиста) + выбор редакции:
   * [Дополнительные материалы](https://gist.github.com/demidovakatya/cef3d462bcf56b84f56950ea490a9e8e) к курсу «Введение в машинное обучение»
