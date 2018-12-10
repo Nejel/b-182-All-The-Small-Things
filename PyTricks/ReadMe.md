@@ -84,3 +84,50 @@ value = None
 
 ```
 
+
+```python
+
+#Build lists using list comprehensions
+
+# GOOD
+data = [7, 20, 3, 15, 11]
+result = [i * 3 for i in data if i > 10]
+print(result) # [60, 45, 33]
+
+# NOT SO GOOD (MOST OF THE TIME)
+data = [7, 20, 3, 15, 11]
+result = []
+for i in data:
+if i > 10:
+result.append(i * 3)
+print(result) # [60, 45, 33]
+
+```
+
+
+```python
+# Create dict from keys and values using zip
+
+# GOOD
+keys = ['Safe', 'Bob', 'Thomas']
+values = ['Hammad', 'Builder', 'Engine']
+d = dict(zip(keys, values))
+print(d) # {'Bob': 'Builder',
+'Safe': 'Hammad',
+'Thomas': 'Engine'}
+
+
+# NOT SO GOOD
+keys = ['Safe', 'Bob', 'Thomas']
+values = ['Hammad', 'Builder', 'Engine']
+d = {}
+for i, key in enumerate(keys):
+d[keys] = values[i]
+print(d) # {'Bob': 'Builder',
+'Safe': 'Hammad',
+'Thomas': 'Engine'}
+
+```
+
+
+
