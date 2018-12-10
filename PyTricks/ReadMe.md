@@ -129,5 +129,35 @@ print(d) # {'Bob': 'Builder',
 
 ```
 
+```python
+
+# Быстро выбрать нужные строки
+
+for line in fh:
+    if not line.startswith('From ') : continue # skip code
+    words = line.split()
+    email = words[1]
+    lst.append(email)
+    count += 1
+    
+```
 
 
+```python
+
+# Быстро читаем файлы (2 способа)
+#Way 1
+fname = input("Enter file name: ")
+fh = open(fname, 'r')
+
+
+
+#Way2
+myfile = open('sample.txt') #this is class '_io.TextIOWrapper'
+# dir(myfile) # way to look at available methods
+content = myfile.read()
+myfile.close()
+print(content)
+
+
+```
