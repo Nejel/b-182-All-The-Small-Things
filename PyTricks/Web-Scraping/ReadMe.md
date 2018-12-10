@@ -6,6 +6,9 @@
 
 [AmazingHiringParser](https://github.com/Nejel/AmazingHiring_parser/blob/master/AmazHireParser.py)
 
+[много айпатоновских буков для разных задач](https://github.com/rossant/ipython-minibook)
+
+
 
 ```python
 #код будет отображаться такъ
