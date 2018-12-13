@@ -2,8 +2,9 @@ REGULAR EXPRESSIONS
 
 [Статья на Тпрогере](https://tproger.ru/translations/regular-expression-python/)
 [Документация к третьему Питону](https://docs.python.org/3/howto/regex.html)
-
-
+[Модификация строк при помощи re](https://docs.python.org/3/howto/regex.html#modifying-strings)
+[Поиск и замена](https://docs.python.org/3/howto/regex.html#search-and-replace)
+[Токенайзер (scanner analyzes)](https://docs.python.org/3/library/re.html#writing-a-tokenizer)
 
 ```python
 \d
@@ -26,7 +27,7 @@ re.match()
 re.search()
 re.findall()
 re.split()
-re.sub()
+[re.sub()](https://docs.python.org/3/library/re.html#re.sub) - замена 
 re.compile()
 
 import re
