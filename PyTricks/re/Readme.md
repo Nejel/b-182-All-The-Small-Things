@@ -8,6 +8,7 @@ REGULAR EXPRESSIONS
 * [Lookahead assertions (проверка впередистоящих значений на соответствие)](https://docs.python.org/3/howto/regex.html#lookahead-assertions)
 * [Modifying and splitting Strings](https://docs.python.org/3/howto/regex.html#modifying-strings)
 * [Search and replace (sub)](https://docs.python.org/3/howto/regex.html#search-and-replace)
+* [Статья Гриши Петрова на Хабре](https://habr.com/post/60369/)
 * [Интерактивная демка (ссылка источник, сама демка также есть в этом репо)](https://github.com/python/cpython/blob/3.7/Tools/demo/redemo.py)
 
 
@@ -146,7 +147,7 @@ The r prefix, making the literal a raw string literal, is needed in this example
 ### [Compilation flags](https://docs.python.org/3/howto/regex.html#compilation-flags)
 
 | Flag| 	Meaning |
-|---|
+|---| |
 | ASCII, A |	Makes several escapes like \w, \b, \s and \d match only on ASCII characters with the respective property. |
 |DOTALL, S |	Make . match any character, including newlines.
 |IGNORECASE, I | 	Do case-insensitive matches.
@@ -193,6 +194,32 @@ In the above example, Python’s automatic concatenation of string literals has 
 (0, 5)
 ```
 
+```python
+str = 'an example word:cat!!'
+match = re.search(r'word:\w\w\w', str)
+# If-statement after search() tests if it succeeded
+if match:
+  print 'found', match.group() ## 'found word:cat'
+else:
+  print 'did not find'
+```
+
+
+```python
+## Search for pattern 'iii' in string 'piiig'.
+## All of the pattern must match, but it may appear anywhere.
+## On success, match.group() is matched text.
+match = re.search(r'iii', 'piiig') =>  found, match.group() == "iii"
+match = re.search(r'igs', 'piiig') =>  not found, match == None
+
+## . = any char but \n
+match = re.search(r'..g', 'piiig') =>  found, match.group() == "iig"
+
+## \d = digit char, \w = word char
+match = re.search(r'\d\d\d', 'p123g') =>  found, match.group() == "123"
+match = re.search(r'\w\w\w', '@@abcd!!') =>  found, match.group() == "abc"
+```
+
 
 ```python
 p = re.compile( ... )
@@ -223,4 +250,64 @@ Detects doubled words in a string:
 >>> p = re.compile(r'\b(\w+)\s+\1\b')
 >>> p.search('Paris in the the spring').group()
 'the the'
+```
+
+
+Пример ниже возвращает список объектов типа 'результат поиска'. Получая эти загадочные объекты вместо обычных строк (которые может вернуть, к примеру, метод findall), мы получаем возможность не только ознакомиться с фактом что текст найден, но и узнать где именно он найден — для этого у объекта типа 'результат поиска' есть специально обученный метод span(), возвращающий точное положение найденного фрагмента в исходном тексте.
+
+```python
+result = re.finditer( ur"{[^}\n]+}", txt )
+for match in result :
+  print match.group()
+```
+
+
+В примере ниже в регулярке выделены три группы: "({[^}\n]+})" соответствует заголовку в фигурных скобках,
+"([^=\n]+)" перед знаком '=' соответствует имени поля и "([^\n]+)" после знака '=' соответствует значению поля. При этом также используется странная группа "(?:)", которая объединяет группы имен и значений полей. Это специальная группа для использования с логическим оператором '|' — она позволяет объединять несколько групп одним оператором '|' без побочных эффектов. Во-вторых, для распечатки результатов использован метод groups() вместо метода group(). Это не спроста — библиотека регулярных выражений в питоне имеет свое собственное представление о том, что такое «результат поиска». Выражается эта самостийность в том, что регулярное выражение из двух групп "([^=\n]+)=([^=\n]+)", примененное к тесту «a=b» вернет ОДИН объект типа «результат», который состоит из нескольких ГРУПП.
+
+```python
+result = re.finditer( ur"({[^}\n]+})|(?:([^=\n]+)=([^\n]+))", txt )
+for match in result :
+  print match.groups()
+
+```
+
+
+```python
+import re
+txt = '''
+{number section}
+num=1
+{text section}
+txt="2"
+'''
+object = re.compile( ur"(?P<section>{[^}\n]+})|(?:(?P<name>[^=\n]+)=(?P<value>[^\n]+))", re.M | re.S | re.U )
+#Перед поиском используется метод re.compile(), который возвращает
+# так называемое «скомпилированное регулярное выражение».
+# Кроме скорости работы и удобства у него есть одно замечательное свойство —
+# если вызвать его метод groupindex(), то мы получим словарь,
+# содержащий имена всех найденных групп и из индексы.
+# К сожалению, словарь почему-то инвертирован — кючем в нем является не индекс, а имя группы.
+
+# используются флаги re.M (корректный поиск начала строки "^" и конца строки "$" в многостроковом тексте), re.S ("." находит совсем все, включая \n) и .U (корректный поиск в unicode тексте)
+
+result = object.finditer( txt )
+group_name_by_index = dict( [ (v, k) for k, v in object.groupindex.items() ] )
+# можно использовать для получения имени группы по ее номеру
+
+print group_name_by_index
+for match in result :
+  for group_index, group in enumerate( match.groups() ) :
+    if group :
+      print "text: %s" % group
+      print "group: %s" % group_name_by_index[ group_index + 1 ]
+      print "position: %d, %d" % match.span( group_index + 1 )
+
+# В результате разбор найденного занимает два цикла —
+# сначала мы итерируемся по результатам поиска, а затем для каждого результата
+# по содержащимся в нем группам. Результатом является точный и полный список токенов,
+# с указанием их типа и позиции в тексте.
+# Этот список можно использовать для обработки текста, подсветки синтаксиса,
+# нахождения ошибок — в общем штука нужная и полезная.
+
 ```

@@ -1,0 +1,1 @@
+Зачем функциям нужен self. [Часть 1](https://stackoverflow.com/questions/2709821/what-is-the-purpose-of-self), [Часть 1](http://neopythonic.blogspot.com/2008/10/why-explicit-self-has-to-stay.html)
