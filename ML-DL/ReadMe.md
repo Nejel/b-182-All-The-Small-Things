@@ -8,7 +8,7 @@ Author: [demidovakatya](https://github.com/demidovakatya/)
 
 
 * [Сборник Джупитеровских ноутов](https://proglib.io/p/jupyter-notebook-best/)
-
+* [Habr MNIST](https://habr.com/post/248395/)
 
 #### Оглавление
 
@@ -18,7 +18,7 @@ Author: [demidovakatya](https://github.com/demidovakatya/)
   * [Рекомендации](https://gist.github.com/demidovakatya/61e15717a9eefae0bd237b7fd959d166) от преподавателей специализации «Машинное обучение и анализ данных»
   * [Литература для поступления в ШАД](https://gist.github.com/demidovakatya/873e4dd6f1c6652ac842)
   * [Подборка научпоп-книг](https://bookmate.com/bookshelves/Nggk0rBi)
-* По темам: 
+* По темам:
   * [Big Data](/big-data.md)
   * [Dataviz](/dataviz.md)
   * [LaTeX](/latex.md)
@@ -46,8 +46,8 @@ Author: [demidovakatya](https://github.com/demidovakatya/)
 * [Доска по data science в Trello — проверенные материалы, организованные по темам (expertise tracks, языки программирования, различные инструменты)](https://trello.com/b/rbpEfMld/data-science)
 * [Machine Learning Resource Guide](https://www.pdf-archive.com/2017/09/02/machine-learning-resource-guide/machine-learning-resource-guide.pdf)
 * [17 ресурсов по машинному обучению  от Типичного Программиста](http://tproger.ru/articles/free-programming-books/#machine-learning)
-* [51 toy data problem in Data Science](https://www.quora.com/Data-Science/What-are-some-good-toy-problems-in-data-science/answer/Alex-Kamil) 
-* [Dive into Machine Learning](http://hangtwenty.github.io/dive-into-machine-learning/) 
+* [51 toy data problem in Data Science](https://www.quora.com/Data-Science/What-are-some-good-toy-problems-in-data-science/answer/Alex-Kamil)
+* [Dive into Machine Learning](http://hangtwenty.github.io/dive-into-machine-learning/)
   * [:octocat: Dive into Machine Learning repo on github](https://github.com/hangtwenty/dive-into-machine-learning)
 * [Data Science Interview Questions](http://www.itshared.org/2015/10/data-science-interview-questions.html) — огромный список вопросов для подготовки к интервью на позицию data scientist'а
 * [Много книг по Natural Language Processing](https://www.dropbox.com/sh/b1c2ulwua9zy574/AACswS1E0IB9LdPDxQ6fexm4a?dl=0)
@@ -64,8 +64,8 @@ Author: [demidovakatya](https://github.com/demidovakatya/)
 * [machine-learning-surveys - A curated list of Machine Learning Surveys, Tutorials and Books](https://github.com/metrofun/machine-learning-surveys)
 * [A hands-on data science crash course in Python by Bart De Vylder and Pieter Buteneers from CoScale](https://github.com/bartdevylder/velocity-tutorial-san-jose)
 * [docker-setup - A Curated List of Docker Images for Data Science Projects, with Easy Setup](https://github.com/yang-zhang/docker-setup)
-* [Notes on Artificial Intelligence – конспекты по разным ML-related темам, от алгебры до Байеса](http://frnsys.com/ai_notes/) 
-  
+* [Notes on Artificial Intelligence – конспекты по разным ML-related темам, от алгебры до Байеса](http://frnsys.com/ai_notes/)
+
 ----------------------------------------------------
 
 ## Библиотека ML-специалиста
@@ -116,13 +116,13 @@ Author: [demidovakatya](https://github.com/demidovakatya/)
 * [Тонна разнообразных курсов по программированию, алгоритмам, в том числе 14 курсов по ML](https://github.com/prakhar1989/awesome-courses)
 * Coursera:
   * [CS229: Machine Learning (Andrew Ng, Stanford University)](https://www.coursera.org/learn/machine-learning) – самый популярный курс по машинному обучению (осторожно, вместо стандартных Питона или R – Matlab/Octave)
-  * Специализация [Машинное обучение и Анализ данных (Яндекс + МФТИ/MIPT)](https://www.coursera.org/specializations/mashinnoye-obucheniye) 
+  * Специализация [Машинное обучение и Анализ данных (Яндекс + МФТИ/MIPT)](https://www.coursera.org/specializations/mashinnoye-obucheniye)
     * :octocat: [мой репозиторий по этой специализации](https://github.com/demidovakatya/mashinnoye-obucheniye)
   * [Machine Learning Foundations: A Case Study Approach (University of Washington)](https://www.coursera.org/learn/ml-foundations/)
   * [Data Mining Specialization](https://www.coursera.org/specializations/data-mining)
   * [Data Science at Scale Specialization (University of Washington)](https://www.coursera.org/specializations/data-science)
   * [Calculus: Single Variable Part 1 (University of Pennsylvania)](https://www.coursera.org/learn/single-variable-calculus)
-  * [Calculus One (The Ohio State University)](https://www.coursera.org/learn/calculus1) 
+  * [Calculus One (The Ohio State University)](https://www.coursera.org/learn/calculus1)
   * [Современная комбинаторика (А.М. Райгородский, МФТИ/MIPT)](https://www.coursera.org/learn/modern-combinatorics)
   * [Теория вероятностей для начинающих (А.М. Райгородский, МФТИ/MIPT)](https://www.coursera.org/learn/probability-theory-basics/)
   * [Линейная алгебра (ВШЭ/HSE)](https://www.coursera.org/course/linalg) — курс линейной алгебры для нематематических факультетов, подходит «для быстрого старта»
@@ -146,7 +146,7 @@ Author: [demidovakatya](https://github.com/demidovakatya/)
 * [Learning from Data (Caltech)](https://work.caltech.edu/telecourse.html) – введение в машинное обучение (основная теория, алгоритмы и области практического применения)
 * [Видеозаписи лекций Школы Анализа Данных (ШАД)](https://yandexdataschool.ru/edu-process/courses)
   * [Видеолекции курса «Машинное обучение» (К. В. Воронцов, ШАД)](https://yandexdataschool.ru/edu-process/courses/machine-learning)
-* [Data Mining in Action course materials (МФТИ/MIPT)](https://github.com/vkantor/MIPT_Data_Mining_In_Action_2016) 
+* [Data Mining in Action course materials (МФТИ/MIPT)](https://github.com/vkantor/MIPT_Data_Mining_In_Action_2016)
 * [Открытый курс OpenDataScience по машинному обучению](https://github.com/Yorko/mlcourse_open)
 * [Intro to Python for Data Science](https://www.datacamp.com/courses/intro-to-python-for-data-science) – основы Python и немного про NumPy
 * [Основы статистики](https://stepic.org/course/76) — качественное введение в статистику, целиком на русском языке
@@ -228,4 +228,3 @@ Author: [demidovakatya](https://github.com/demidovakatya/)
   * [blog.shakirm.com](http://blog.shakirm.com/)
   * [blog.paralleldots.com](http://blog.paralleldots.com)
   * [alexanderdyakonov.wordpress.com](https://alexanderdyakonov.wordpress.com/feed/)
-
