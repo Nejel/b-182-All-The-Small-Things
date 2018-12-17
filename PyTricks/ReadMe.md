@@ -4,6 +4,8 @@
 
 [Идиомы на Python Programming wiki](https://en.wikibooks.org/wiki/Python_Programming/Idioms)
 
+[Idioms and Anti-Idioms in Python (Python2)](https://docs.python.org/2/howto/doanddont.html)
+
 Советы, трюки, идиомы -- [статья на proglib](https://proglib.io/p/python-tips-tricks/)
 
 [Yields](https://habr.com/post/132554/)
