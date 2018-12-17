@@ -1,10 +1,13 @@
-## PyTricks 
+## PyTricks
 
 Предыдущая версия Вики -- [здесь](https://github.com/Nejel/coursera-python-specialization-repository/wiki)
 
 Советы, трюки, идиомы -- [статья на proglib](https://proglib.io/p/python-tips-tricks/)
 
-[Идиомы](http://safehammad.com/downloads/python-idioms-2014-01-16.pdf): 
+[Идиомы](http://safehammad.com/downloads/python-idioms-2014-01-16.pdf):
+
+[Yields](https://habr.com/post/132554/)
+
 
 ```python
 
@@ -27,7 +30,7 @@ print('A', pet, 'can be very cute!')
 
 ```python
 
-#if | if not 
+#if | if not
 
 {'Safe': 'Cat', 'George': 'Dog'}
 if name and pets and owners:
@@ -53,8 +56,8 @@ print(a, b) # 6, 5
 
 ```python
 
- # Создание стринги из последовательности 
- 
+ # Создание стринги из последовательности
+
  chars = ['S', 'a', 'f', 'e']
  name = ''.join(chars)
  print(name) # Safe
@@ -63,8 +66,8 @@ print(a, b) # 6, 5
 
 ```python
 
- # Создание стринги из последовательности 
- 
+ # Создание стринги из последовательности
+
  chars = ['S', 'a', 'f', 'e']
  name = ''.join(chars)
  print(name) # Safe
@@ -74,7 +77,7 @@ print(a, b) # 6, 5
 
 ```python
 
-# try except 
+# try except
 
 d = {'x': '5'}
 try:
@@ -139,7 +142,7 @@ for line in fh:
     email = words[1]
     lst.append(email)
     count += 1
-    
+
 ```
 
 
