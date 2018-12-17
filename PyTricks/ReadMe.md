@@ -63,16 +63,6 @@ print(a, b) # 6, 5
 
 ```
 
-```python
-
- # Создание стринги из последовательности
-
- chars = ['S', 'a', 'f', 'e']
- name = ''.join(chars)
- print(name) # Safe
-
-```
-
 
 ```python
 
