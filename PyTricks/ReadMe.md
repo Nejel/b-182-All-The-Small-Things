@@ -4,10 +4,9 @@
 
 Советы, трюки, идиомы -- [статья на proglib](https://proglib.io/p/python-tips-tricks/)
 
-[Идиомы](http://safehammad.com/downloads/python-idioms-2014-01-16.pdf):
-
 [Yields](https://habr.com/post/132554/)
 
+[Идиомы](http://safehammad.com/downloads/python-idioms-2014-01-16.pdf):
 
 ```python
 
