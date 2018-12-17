@@ -1,3 +1,5 @@
+Source: [https://en.wikibooks.org/wiki/Python_Programming/Idioms](https://en.wikibooks.org/wiki/Python_Programming/Idioms)
+
 To iterate through a dictionary, either keys, values, or both:
 
 ```python
