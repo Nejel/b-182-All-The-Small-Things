@@ -2,6 +2,8 @@
 
 Предыдущая версия Вики -- [здесь](https://github.com/Nejel/coursera-python-specialization-repository/wiki)
 
+[Идиомы на Python Programming wiki](https://en.wikibooks.org/wiki/Python_Programming/Idioms)
+
 Советы, трюки, идиомы -- [статья на proglib](https://proglib.io/p/python-tips-tricks/)
 
 [Yields](https://habr.com/post/132554/)
