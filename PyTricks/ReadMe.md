@@ -118,7 +118,7 @@ print('v =', v)
 
 Enumerator возвращает нумерованный список от последовательности элементов
 
-````python
+```python
 x = ('apple', 'banana', 'cherry')
 y = enumerate(x)
 
