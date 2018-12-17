@@ -96,6 +96,21 @@ print(result) # [60, 45, 33]
 
 ```
 
+zip возвращает последовательность кортежей 
+[Больше про zip](https://www.programiz.com/python-programming/methods/built-in/zip)
+
+```python
+coordinate = ['x', 'y', 'z']
+value = [3, 4, 5, 0, 9]
+
+result = zip(coordinate, value)
+resultList = list(result)
+print(resultList)
+
+c, v =  zip(*resultList)
+print('c =', c)
+print('v =', v)
+```
 
 ```python
 # Create dict from keys and values using zip
