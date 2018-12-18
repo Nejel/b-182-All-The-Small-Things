@@ -2,12 +2,15 @@
 
 Предыдущая версия Вики -- [здесь](https://github.com/Nejel/coursera-python-specialization-repository/wiki)
 
-Советы, трюки, идиомы -- [статья на proglib](https://proglib.io/p/python-tips-tricks/)
+[Идиомы на Python Programming wiki](https://en.wikibooks.org/wiki/Python_Programming/Idioms)
 
-[Идиомы](http://safehammad.com/downloads/python-idioms-2014-01-16.pdf):
+[Idioms and Anti-Idioms in Python (Python2)](https://docs.python.org/2/howto/doanddont.html)
+
+Советы, трюки, идиомы -- [статья на proglib](https://proglib.io/p/python-tips-tricks/)
 
 [Yields](https://habr.com/post/132554/)
 
+[Идиомы](http://safehammad.com/downloads/python-idioms-2014-01-16.pdf):
 
 ```python
 
@@ -64,16 +67,6 @@ print(a, b) # 6, 5
 
 ```
 
-```python
-
- # Создание стринги из последовательности
-
- chars = ['S', 'a', 'f', 'e']
- name = ''.join(chars)
- print(name) # Safe
-
-```
-
 
 ```python
 
@@ -107,6 +100,36 @@ print(result) # [60, 45, 33]
 
 ```
 
+zip возвращает последовательность кортежей 
+[Больше про zip](https://www.programiz.com/python-programming/methods/built-in/zip)
+
+```python
+coordinate = ['x', 'y', 'z']
+value = [3, 4, 5, 0, 9]
+
+result = zip(coordinate, value)
+resultList = list(result)
+print(resultList)
+
+c, v =  zip(*resultList)
+print('c =', c)
+print('v =', v)
+
+>>>[('x', 3), ('y', 4), ('z', 5)]
+>>>c = ('x', 'y', 'z')
+>>>v = (3, 4, 5)
+```
+
+Enumerator возвращает нумерованный список от последовательности элементов
+
+```python
+x = ('apple', 'banana', 'cherry')
+y = enumerate(x)
+
+print(list(y))
+
+>>>[(0, 'apple'), (1, 'banana'), (2, 'cherry')]
+```
 
 ```python
 # Create dict from keys and values using zip
