@@ -1,4 +1,4 @@
-## PyTricks 
+## set()
 
 Предыдущая версия Вики -- [здесь](https://github.com/Nejel/coursera-python-specialization-repository/wiki)
 
@@ -29,4 +29,23 @@ if not input_values.issubset(colours):
 	
 
 	
+```
+
+Hackerrank Challenges:
+
+[На операцию union](https://www.hackerrank.com/challenges/py-set-union/problem)
+
+[На операцию difference](https://www.hackerrank.com/challenges/py-set-difference-operation/problem)
+
+
+```python
+
+n1 = input().split() # собираем ввод со строки 1
+b1 = input().split() # собираем ввод со строки 2
+
+n2 = set(n1) # преобразуем строку 1 в сет
+
+w = n2.difference(b1)
+print(len(w)) # выводим длинну массива
+
 ```
