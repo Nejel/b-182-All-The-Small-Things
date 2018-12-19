@@ -1,0 +1,1 @@
+[https://docs.python.org/3.4/library/datetime.html#timedelta-objects](https://docs.python.org/3.4/library/datetime.html#timedelta-objects)
