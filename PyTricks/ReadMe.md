@@ -100,7 +100,7 @@ print(result) # [60, 45, 33]
 
 ```
 
-zip возвращает последовательность кортежей 
+zip возвращает последовательность кортежей
 [Больше про zip](https://www.programiz.com/python-programming/methods/built-in/zip)
 
 ```python
@@ -185,5 +185,26 @@ content = myfile.read()
 myfile.close()
 print(content)
 
+
+```
+
+
+Посчитать количество элементов в словаре
+```python
+
+def sockMerchant(n, ar):
+    MyList = ar
+    my_dict = {i:MyList.count(i) for i in MyList} # Посчитать количество элементов в словаре
+    print(my_dict)
+    result = 0
+    for k, v in my_dict.items():
+        #if v > 1:
+        if v > 1 and v // 2:
+            print(k)
+            result += (v // 2)
+        else:
+            pass
+
+    return result
 
 ```
