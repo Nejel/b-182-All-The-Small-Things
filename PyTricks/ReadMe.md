@@ -337,3 +337,43 @@ while running:
         thiselem = elem
         nextelem = li[li.index(elem)+1]
 ```
+
+
+Перемножаем стринги и ищем конкретный элемент, считаем количество его повторений.
+```python
+
+def repeatedString(s, n):
+    counter = 0
+    if len(s) > 1:
+        s1 = s[0]
+        slong = s * n
+        slong2 = slong[0:n]
+        #print(slong2)
+        for i in slong2:
+            if i == s1:
+                counter += 1
+            else:
+                pass
+    else:
+        counter = n
+    return counter
+
+```
+
+Просто извлекаем элементы по номерам
+```python
+nd = input().split()
+n = int(nd[0])
+d = int(nd[1])
+```
+
+
+Удаляем первый элемент из листа и добавляем его в конец листа (Arrays: Left Rotation)
+```python
+def rotLeft(a, d):
+    for i in range (0, d):
+        a1 = a[0]
+        del a[0]
+        a.append(a1)
+    return a
+```
