@@ -326,3 +326,14 @@ if __name__ == '__main__':
     s = input()
     minion_game(s)
 ```
+
+
+Select next element in list
+```python
+li = [0, 1, 2, 3]
+running = True
+while running:
+    for elem in li:
+        thiselem = elem
+        nextelem = li[li.index(elem)+1]
+```
