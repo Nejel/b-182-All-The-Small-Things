@@ -208,3 +208,121 @@ def sockMerchant(n, ar):
     return result
 
 ```
+
+
+Посчитать количество элементов в словаре (full version)
+```python
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+# Complete the sockMerchant function below.
+def sockMerchant(n, ar):
+    MyList = ar
+    my_dict = {i:MyList.count(i) for i in MyList}
+    print(my_dict)
+    result = 0
+    for k, v in my_dict.items():
+        #if v > 1:
+        if v > 1 and v // 2:
+            print(k)
+            result += (v // 2)
+        else:
+            pass
+
+    return result
+
+
+if __name__ == '__main__':
+    #fptr = open(os.environ['1.txt'], 'w')
+
+    n = 10
+
+    ar = [1, 1, 3, 1, 2, 1, 3, 3, 3, 3]
+
+    result = sockMerchant(n, ar)
+
+    fptr.write(str(result) + '\n')
+
+    fptr.close()
+```
+
+
+Посчитать количество выходов в ниже нуля (считаем долины):
+```python
+def countingValleys(way):
+    highcounter = 0
+    abovesealevel = 'unknown'
+    direction = 'unknown'
+    valleycounter = 0
+    stepsup = 0
+    stepsdown = 0
+    for i in way:
+        if i == 'D':
+            direction = 'Down'
+            stepsdown += 1
+            #if valleycounter == 0:
+            #    valleycounter = 1
+            highcounter -= 1
+            if highcounter < 0:
+                abovesealevel = 'No'
+
+
+
+        if i == 'U':
+            direction = 'Up'
+            stepsup -= 1
+            highcounter += 1
+            if highcounter > 0:
+                abovesealevel = 'Yes'
+        else:
+            pass
+
+        if direction == 'Down' and highcounter == -1:
+            valleycounter += 1
+
+    return valleycounter
+
+
+way = 'UDDDUDUU'
+result = countingValleys(way)
+print(result)
+```
+
+
+Считаем гласные
+```python
+def minion_game(string):
+    # your code goes here
+    result = 'fake'
+    kevin = 0
+    stuart = 0
+    counter = 0
+
+    for i in s:
+        if i in ['A', 'E', 'I', 'O', 'U']:
+            counter += 1
+            kevin += (len(s) - (counter - 1))
+        else:
+            counter += 1
+            stuart += (len(s) - (counter - 1))
+
+    if kevin > stuart:
+        result = ('Kevin %s' % kevin)
+        print(result)
+    elif kevin < stuart:
+        result = ('Stuart %s' % stuart)
+        print(result)
+    else:
+        print('Draw')
+    return result
+
+
+if __name__ == '__main__':
+    s = input()
+    minion_game(s)
+```
