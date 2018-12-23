@@ -192,20 +192,26 @@ print(content)
 Посчитать количество элементов в словаре
 ```python
 
+n = 10
+ar = [1, 1, 3, 1, 2, 1, 3, 3, 3, 3]
+
 def sockMerchant(n, ar):
     MyList = ar
-    my_dict = {i:MyList.count(i) for i in MyList} # Посчитать количество элементов в словаре
-    print(my_dict)
+    my_dict = {i:MyList.count(i) for i in MyList} # Посчитать количество элементов в словаре. {1: 4, 3: 5, 2: 1} 1 (встречается 4 раза), 3 (5 раз)
+    print(my_dict) # {1: 4, 3: 5, 2: 1}
     result = 0
     for k, v in my_dict.items():
         #if v > 1:
         if v > 1 and v // 2:
-            print(k)
+            print(k) # считаем элементы, которые делятся нацело и встречаются больше 1 раза: 1 (встречается 4 раза), 3 (5 раз)
             result += (v // 2)
         else:
             pass
 
     return result
+    
+    
+sockMerchant(n, ar)
 
 ```
 
