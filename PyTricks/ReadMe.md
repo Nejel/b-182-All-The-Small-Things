@@ -377,3 +377,31 @@ def rotLeft(a, d):
         a.append(a1)
     return a
 ```
+
+
+Сравнить два массива (array) и показать результат
+```python
+
+arr1 = [(7, 0.78, 7920), (8, 0.9, 9000)]
+arr2 = [(7, 1.68, 8460)]
+
+dict1 = {i: (x, y) for i, x, y in arr1}
+dict2 = {i: (x, y) for i, x, y in arr2}
+
+diffArray = [
+    (
+        i,
+        abs(dict2[i][0] - dict1[i][0]),
+        abs(dict2[i][1] - dict1[i][1]),
+    )
+    if i in dict2
+    else (i, dict1[i][0], dict1[i][1])
+    for i in dict1
+]
+
+print(diffArray)
+
+# Surprising result hule
+# [(7, 0.8999999999999999, 540), (8, 0.9, 9000)]
+
+```
