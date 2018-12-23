@@ -192,6 +192,9 @@ print(content)
 Посчитать количество элементов в словаре
 ```python
 
+n = 10
+ar = [1, 1, 3, 1, 2, 1, 3, 3, 3, 3]
+
 def sockMerchant(n, ar):
     MyList = ar
     my_dict = {i:MyList.count(i) for i in MyList} # Посчитать количество элементов в словаре
@@ -206,6 +209,9 @@ def sockMerchant(n, ar):
             pass
 
     return result
+    
+    
+sockMerchant(n, ar)
 
 ```
 
