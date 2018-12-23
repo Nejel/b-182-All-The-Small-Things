@@ -209,8 +209,8 @@ def sockMerchant(n, ar):
             pass
 
     return result
-    
-    
+
+
 sockMerchant(n, ar)
 
 ```
@@ -409,5 +409,43 @@ print(diffArray)
 
 # Surprising result hule
 # [(7, 0.8999999999999999, 540), (8, 0.9, 9000)]
+
+```
+
+
+Преобразовать стрингу в лист и сравнить символы попарно
+```python
+
+#s = ['A','A','A','B','B','B']
+s = 'AAABBB'
+
+def alternatingCharacters(s):
+    counter = 0
+    s = [i for i in s]  # преобразуем стрингу в лист
+    print(s)
+    try:
+        for elem in s:
+            try:
+                thiselem = elem  # текущий элемент
+                nextelem = s[s.index(
+                    elem) + 1]  # смотрим какой следующий элемент в списке. скорее всего эта строка не стабаывает в конце списка
+            except:
+                counter += 1
+
+            if thiselem == nextelem:
+                del s[s.index(elem)]  # удаляем текущий элемент
+                counter += 1
+
+            elif thiselem != nextelem:
+                pass
+            # elif nextelem == '': # почему-то не работает
+            #    counter += 1
+    except:
+        pass
+    print(counter)
+    # print(s)
+    return counter
+
+alternatingCharacters(s)
 
 ```
