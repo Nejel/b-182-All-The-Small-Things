@@ -449,3 +449,70 @@ def alternatingCharacters(s):
 alternatingCharacters(s)
 
 ```
+
+
+Посчитаем количество слов при помощи Counter (счетчик)
+```python
+
+from collections import Counter
+
+interests = [(0, "One Element"), (0, "Second Element"), (2, "Third")]
+
+# word and frequencies
+
+words_and_counts = Counter(word for user, interest in interests for word in interests.lower().split())
+
+for word, count in word_and_counts.most_common():
+    if count > 1:
+        print(word, count)
+
+# Ожидаемый результат:
+#
+#Element 2
+#One 1
+#Second 1
+#Third 1
+
+
+
+```
+
+
+
+Посчитаем количество слов при помощи Counter (счетчик)
+```python
+
+from collections import defaultdict, Counter
+
+lookup = defaultdict(int)
+my_counter = Counter()
+
+```
+
+
+```python
+
+def f(x=2): #дефолтное значение аргумента
+    pass
+
+def apply_to_one(f):
+    """вызывает функцию ф с 1 в качестве аргумента """
+    return f(1)
+
+```
+
+```python
+
+# анонимная функция
+y = apply_to_one(lambda x: x + 4) # = 5
+
+```
+
+```python
+
+#указаны аргументы по имени, функция вычитания
+def substract(a=0, b=0):
+    return a - b
+
+
+```
