@@ -35,9 +35,11 @@ print('A', pet, 'can be very cute!')
 
 #if | if not
 
-{'Safe': 'Cat', 'George': 'Dog'}
+name = 'Safe'
+pets = ['Dog', 'Cat', 'Hamster']
+owners = {'Safe': 'Cat', 'George': 'Dog'}
 if name and pets and owners:
-print('We have pets!')
+    print('We have pets!')
 
 ```
 
