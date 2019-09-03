@@ -8,8 +8,8 @@
 Метрики к моделям:
 
 * Accuracy ( (TP+TN) / (TP+TN+FP+FN) )
-* Precision ( TP / TP + FP )
-* Recall (TP / TP + FN )
+* Precision ( TP / (TP + FP) )
+* Recall (TP / (TP + FN) )
 * F1 (2 \* ( (Prec \* Recall) / (Precision + Recall) ) )
 * AUC ROC ( Площадь кривой под кривой ошибок )
 * AUC PR ( Кривая Precision / Recall )
